@@ -11,7 +11,7 @@
 
     - Diziyi küçükten büyüğe sıraladık. [0,1,2,3,4,5,6,7,8,9]
     - Orta noktası olan index 5'te bulunan eleman = [4]
-    - Aradığımız sayı [8] ortadaki eleman (4)'ten büyük, sağ tarafta aramaya devam edeceğiz.
+    - Aradığımız sayı [8] ortadaki eleman [4]'ten büyük, sağ tarafta aramaya devam edeceğiz.
     - Yeni arama aralığımız [5,6,7,8,9], orta noktamız ise [7]
     - [8] > [7] olduğu için aramaya sağ tarafta devam edeceğiz. 
     - Yeni arama aralığımız [8,9]. İki elemanlı dizinin hangi indexini orta kabul edeceğimize göre 
