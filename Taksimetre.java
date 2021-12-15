@@ -10,8 +10,6 @@ Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran prog
 
 import java.util.Scanner;
 
-import static java.lang.Math.sqrt;
-
 public class Taksimetre {
     public static void main(String[] args) {
         double km, tarife = 2.2, min = 20, acilis = 10, toplam;
