@@ -16,35 +16,32 @@ C(n,r) = n! / (r! * (n-r)!)
 import java.util.Scanner;
 
 public class Kombinasyon {
+    static int fact(int factNum) {
+        int factResult = 1;
+
+        for (int i = 1; i <= factNum; i++) {
+            factResult *= i;
+        }
+
+        return factResult;
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n, r, nFaktor = 1, rFaktor = 1, difFactor = 1, result;
 
         System.out.print("n sayısı: ");
-        n = input.nextInt();
+        int n = input.nextInt();
 
         System.out.print("r sayısı: ");
-        r = input.nextInt();
+        int r = input.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            nFaktor *= i;
-        }
+        int result = fact(n) / (fact(r) * fact(n - r));
 
-        for (int j = 1; j <= r; j++) {
-            rFaktor *= j;
-        }
-
-        for (int k = 1; k <= n - r; k++) {
-            difFactor *= k;
-        }
-        // 3 defa for-loop yazmak mantıklı değil, fonksiyon yazmayı öğrenince güncelle.
-
-        result = nFaktor / (rFaktor * difFactor);
-        
         System.out.print("C(" + n + "," + r + ") = " + result);
 
     }
 }
+
 
 /*
 
