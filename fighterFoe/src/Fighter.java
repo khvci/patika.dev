@@ -1,11 +1,11 @@
 public class Fighter {
     String name;
-    byte damage;
-    byte defence;
+    int damage;
+    int defence;
     int health;
     double weight;
 
-    public Fighter(String name, byte damage, byte defence, byte health, byte weight)
+    public Fighter(String name, int damage, int defence, int health, double weight)
     {
         this.name = name;
         this.damage = damage;
