@@ -2,8 +2,8 @@ public class Fighter {
     String name;
     byte damage;
     byte defence;
-    byte health;
-    byte weight;
+    int health;
+    double weight;
 
     public Fighter(String name, byte damage, byte defence, byte health, byte weight)
     {

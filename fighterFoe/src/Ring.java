@@ -52,10 +52,16 @@ public class Ring {
                     System.out.println("==== NEW ROUND ====");
 
                     f2.health = f1.hit(f2);
-                    if (isWinner()) {break};
+                    if (isWinner())
+                    {
+                        break;
+                    }
 
                     f1.health = f2.hit(f1);
-                    if (isWinner()) {break};
+                    if (isWinner())
+                    {
+                        break;
+                    }
                 }
             } else {
                 while (1 == 1)
@@ -63,10 +69,16 @@ public class Ring {
                     System.out.println("==== NEW ROUND ====");
 
                     f1.health = f2.hit(f1);
-                    if (isWinner()) {break};
+                    if (isWinner())
+                    {
+                        break;
+                    }
 
                     f2.health = f1.hit(f2);
-                    if (isWinner()) {break};
+                    if (isWinner())
+                    {
+                        break;
+                    }
                 }
             }
 
