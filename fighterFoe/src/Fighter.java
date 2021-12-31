@@ -14,4 +14,25 @@ public class Fighter {
         this.weight = weight;
     }
 
+    public int hit(Fighter foe)
+    {
+        System.out.println("--------------------");
+        System.out.println(this.name + " attacked with force " + this.damage + " to " + foe.name);
+
+        if (foe.defence >= this.damage)
+        {
+            System.out.println(foe.name + " dodged the attack.");
+            return foe.health;
+        }
+
+        if (foe.health - this.damage <= 0)
+        {
+            return 0;
+        }
+
+        return (foe.health - this.damage);
+    }
+
+
+
 }
