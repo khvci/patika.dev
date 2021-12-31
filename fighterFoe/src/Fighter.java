@@ -16,21 +16,23 @@ public class Fighter {
 
     public int hit(Fighter foe)
     {
-        System.out.println("--------------------");
-        System.out.println(this.name + " attacked with force " + this.damage + " to " + foe.name);
+        int tempHit = (int)(Math.random() * this.damage);
+        int tempDef = (int)(Math.random() * this.defence);
 
-        if (foe.defence >= this.damage)
+        System.out.println(this.name + " attacked with force " + tempHit + " to " + foe.name);
+
+        if (tempDef >= tempHit)
         {
             System.out.println(foe.name + " dodged the attack.");
             return foe.health;
         }
 
-        if (foe.health - this.damage <= 0)
+        if (foe.health - tempHit <= 0)
         {
             return 0;
         }
 
-        return (foe.health - this.damage);
+        return (foe.health - tempHit);
     }
 
 

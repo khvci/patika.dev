@@ -37,8 +37,8 @@ public class Ring {
 
     public void printStatus()
     {
-        System.out.println(f1.name + "'s remaining health:\t" + f1.health);
-        System.out.println(f2.name + "'s remaining health:\t" + f2.health);
+        System.out.print(f1.name + "'s remaining health is " + f1.health + " and ");
+        System.out.println(f2.name + "'s remaining health:" + f2.health);
     }
 
     public void run()
@@ -49,7 +49,8 @@ public class Ring {
             {
                 while (1 == 1)
                 {
-                    System.out.println("==== NEW ROUND ====");
+                    System.out.println("\n==== NEW ROUND ====");
+                    printStatus();
 
                     f2.health = f1.hit(f2);
                     if (isWinner())
@@ -66,7 +67,8 @@ public class Ring {
             } else {
                 while (1 == 1)
                 {
-                    System.out.println("==== NEW ROUND ====");
+                    System.out.println("\n==== NEW ROUND ====");
+                    printStatus();
 
                     f1.health = f2.hit(f1);
                     if (isWinner())
