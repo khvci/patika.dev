@@ -34,4 +34,10 @@ public class Ring {
         double randomNumber = Math.random();
         return (randomNumber < 0.5) ? 1 : 2;
     }
+
+    public void printStatus()
+    {
+        System.out.println(f1.name + "'s remaining health:\t" + f1.health);
+        System.out.println(f2.name + "'s remaining health:\t" + f2.health);
+    }
 }
