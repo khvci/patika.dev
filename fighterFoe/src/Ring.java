@@ -28,4 +28,10 @@ public class Ring {
 
         return false;
     }
+
+    public int randomFighterSelector()
+    {
+        double randomNumber = Math.random();
+        return (randomNumber < 0.5) ? 1 : 2;
+    }
 }
