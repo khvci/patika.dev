@@ -40,4 +40,38 @@ public class Ring {
         System.out.println(f1.name + "'s remaining health:\t" + f1.health);
         System.out.println(f2.name + "'s remaining health:\t" + f2.health);
     }
+
+    public void run()
+    {
+        if (weightCheck())
+        {
+            if (randomFighterSelector() < 2)
+            {
+                while (1 == 1)
+                {
+                    System.out.println("==== NEW ROUND ====");
+
+                    f2.health = f1.hit(f2);
+                    if (isWinner()) {break};
+
+                    f1.health = f2.hit(f1);
+                    if (isWinner()) {break};
+                }
+            } else {
+                while (1 == 1)
+                {
+                    System.out.println("==== NEW ROUND ====");
+
+                    f1.health = f2.hit(f1);
+                    if (isWinner()) {break};
+
+                    f2.health = f1.hit(f2);
+                    if (isWinner()) {break};
+                }
+            }
+
+        } else {
+            System.out.println("Weight difference can't be more than 10%. Match is cancelled.");
+        }
+    }
 }
