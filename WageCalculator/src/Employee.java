@@ -37,13 +37,12 @@ public class Employee {
         }
     }
 
-    public String toString() {
+    public void toString() {
         System.out.println("--------------------");
         System.out.println("Name\t\t: " + this.employeeName);
         System.out.println("Work Hours\t: " + this.workHours);
         System.out.println("Contract\t: " + this.contractYear);
         System.out.println("New Salary\t: " + (int)(this.salary));
-        return null;
     }
 
     public void newYear() {
