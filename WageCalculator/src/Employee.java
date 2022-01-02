@@ -38,12 +38,19 @@ public class Employee {
     }
 
     public String toString() {
-        System.out.println("Name:\t");
-        System.out.println("Current Salary:\t");
-        System.out.println("Work Hours:.\t");
-        System.out.println("Contract Year\t");
-        System.out.println("New Salary:\t");
+        System.out.println("--------------------");
+        System.out.println("Name\t\t: " + this.employeeName);
+        System.out.println("Work Hours\t: " + this.workHours);
+        System.out.println("Contract\t: " + this.contractYear);
+        System.out.println("New Salary\t: " + (int)(this.salary));
         return null;
+    }
+
+    public void newYear() {
+        this.bonus();
+        this.raiseSalary();
+        this.tax();
+        this.toString();
     }
 
 
