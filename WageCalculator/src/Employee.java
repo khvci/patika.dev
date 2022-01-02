@@ -13,13 +13,13 @@ public class Employee {
         this.currentYear = 2022;
     }
 
-    public float bonus() {
+    public void bonus() {
         if (this.workHours > 40) {
-            salary += (this.workHours - 40) * 30;
+            this.salary += (this.workHours - 40) * 30;
         }
     }
 
-    public float raiseSalary() {
+    public void raiseSalary() {
         if (this.currentYear - this.contractYear < 10) {
             this.salary *= 1.05;
         } else if (this.currentYear - this.contractYear < 20) {
@@ -30,10 +30,9 @@ public class Employee {
 
         bonus();
         tax();
-        toString();
     }
 
-    public float tax() {
+    public void tax() {
         if (this.salary > 1000) {
             this.salary *= 0.97;
         }
