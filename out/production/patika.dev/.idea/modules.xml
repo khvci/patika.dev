@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/WageCalculator/WageCalculator.iml" filepath="$PROJECT_DIR$/WageCalculator/WageCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fighterFoe/fighterFoe.iml" filepath="$PROJECT_DIR$/fighterFoe/fighterFoe.iml" />
       <module fileurl="file://$PROJECT_DIR$/patika.dev.iml" filepath="$PROJECT_DIR$/patika.dev.iml" />
     </modules>
   </component>
