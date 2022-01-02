@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Employee {
     String employeeName;
     double salary;
@@ -10,7 +12,7 @@ public class Employee {
         this.salary = salary;
         this.workHours = workHours;
         this.contractYear = contractYear;
-        this.currentYear = 2022;
+        this.currentYear = Calendar.getInstance().get(Calendar.YEAR);
     }
 
     public void bonus() {
@@ -27,9 +29,6 @@ public class Employee {
         } else {
             this.salary *= 1.15;
         }
-
-        bonus();
-        tax();
     }
 
     public void tax() {
