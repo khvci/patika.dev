@@ -37,7 +37,7 @@ public class Employee {
         }
     }
 
-    public void toString() {
+    public void printEmployee() {
         System.out.println("--------------------");
         System.out.println("Name\t\t: " + this.employeeName);
         System.out.println("Work Hours\t: " + this.workHours);
@@ -49,7 +49,7 @@ public class Employee {
         this.bonus();
         this.raiseSalary();
         this.tax();
-        this.toString();
+        this.printEmployee();
     }
 
 
