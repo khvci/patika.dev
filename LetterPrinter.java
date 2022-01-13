@@ -26,3 +26,18 @@ public class LetterPrinter {
         }
     }
 }
+
+/*
+
+Output:
+
+ *  *  *
+ *        *
+ *        *
+ *  *  *
+ *        *
+ *        *
+ *  *  *
+
+
+ */
