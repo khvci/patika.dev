@@ -13,7 +13,7 @@ public class SubarraySums {
             int currentItem = array[i];
             if (currentItem < 0) counter++;
 
-            for (int j = i - 1; j > 0; j--) {
+            for (int j = i - 1; j >= 0; j--) {
                 currentItem += array[j];
                 if (currentItem < 0) counter++;
             }
