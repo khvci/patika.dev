@@ -1,3 +1,5 @@
+
+
 # Compiled class file
 *.class
 
@@ -24,7 +26,6 @@ hs_err_pid*
 
 # ide files
 *.idea
-*.xml
 
 #operating system
 *.DS_Store
