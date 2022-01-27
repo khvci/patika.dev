@@ -1,55 +1,38 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessNumber {
+public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner input = new Scanner(System.in);
 
         int numberToGuess = random.nextInt(100);
-        int usersGuess = -1;
-        int usersNewGuess;
-        byte triesLeft = 44;
-        System.out.println(numberToGuess);
+        int usersGuess;
+        int triesLeft = 5;
 
-        System.out.println("Number can be between 0 and 100. Your guess: ");
-        usersNewGuess = input.nextInt();
+        System.out.println("TEST-- numbertoguess: " + numberToGuess);
+        do {
+            System.out.print("You have " + triesLeft + " to guess it correctly. Your guess: ");
+            usersGuess = input.nextInt();
 
-        if (usersNewGuess < 100 && usersNewGuess > 0) {
-            usersGuess = usersNewGuess;
-        } else {
-            System.out.println("It can be between 0 and 100. Try Again.");
-        }
-
-        while (usersGuess != numberToGuess && triesLeft > 0) {
-            if (usersGuess < numberToGuess) {
-                System.out.println("Increase your guess. " + triesLeft + " tries left.");
-                usersNewGuess = input.nextInt();
-                if (usersNewGuess > usersGuess) {
-                    usersGuess = usersNewGuess;
-                    triesLeft--;
-                } else {
-                    System.out.println("You did not increase your guess. Try again.");
-                }
-
-            } else if (usersNewGuess < 100) {
-                System.out.println("Decrease your guess. " + triesLeft + " tries left.");
-                usersNewGuess = input.nextInt();
-                if (usersNewGuess < usersGuess) {
-                    usersGuess = usersNewGuess;
-                    triesLeft--;
-                } else {
-                    System.out.println("You did not decreased your guess. Try again.");
-                }
+            if (usersGuess < 0 || usersGuess > 100) {
+                System.out.print("It can only be between 0 and 100. ");
             } else {
-                System.out.println("It can be between 0 and 100. Try Again.");
+                if (usersGuess > numberToGuess) {
+                    System.out.println("It's lower than " + usersGuess);
+                    triesLeft--;
+                } else if (usersGuess < numberToGuess) {
+                    System.out.println("It's higher than " + usersGuess);
+                    triesLeft--;
+                }
             }
-        }
+        } while (usersGuess != numberToGuess && triesLeft > 0);
 
-        if (usersGuess == numberToGuess) {
-            System.out.println("Congrats! It was " + numberToGuess + " indeed!");
+
+        if (numberToGuess != usersGuess) {
+            System.out.println("Game Over.");
         } else {
-            System.out.println("Game over.");
+            System.out.println("Congrats! It was " + numberToGuess + " indeed!");
         }
     }
 }
