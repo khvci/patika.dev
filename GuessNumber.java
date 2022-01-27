@@ -10,7 +10,6 @@ public class Main {
         int usersGuess;
         int triesLeft = 5;
 
-        System.out.println("TEST-- numbertoguess: " + numberToGuess);
         do {
             System.out.print("You have " + triesLeft + " to guess it correctly. Your guess: ");
             usersGuess = input.nextInt();
